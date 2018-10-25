@@ -172,6 +172,7 @@ public class StoreApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for getInventory
      * @param progressListener Progress listener
@@ -284,6 +285,7 @@ public class StoreApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for getOrderById
      * @param orderId ID of pet that needs to be fetched (required)
@@ -406,6 +408,7 @@ public class StoreApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for placeOrder
      * @param order order placed for purchasing the pet (required)
@@ -527,4 +530,5 @@ public class StoreApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
 }

@@ -175,4 +175,5 @@ public class FakeClassnameTags123Api {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
 }

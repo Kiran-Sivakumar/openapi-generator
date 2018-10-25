@@ -173,6 +173,7 @@ public class PetApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for deletePet
      * @param petId Pet id to delete (required)
@@ -299,6 +300,40 @@ public class PetApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
+    public class APIdeletePetRequest {
+        private final Long petId;
+        private String apiKey;
+
+        private APIdeletePetRequest(Long petId) {
+            this.petId = petId;
+        }
+
+        public APIdeletePetRequest apiKey(String apiKey) {
+            this.apiKey = apiKey;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return deletePetCall(petId, apiKey, progressListener, progressRequestListener);
+        }
+
+        public void execute() throws ApiException {
+            deletePet(petId, apiKey);
+        }
+
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return deletePetWithHttpInfo(petId, apiKey);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return deletePetAsync(petId, apiKey, callback);
+        }
+    }
+
+    public APIdeletePetRequest deletePet(Long petId) {
+        return new APIdeletePetRequest(petId);
+    }
     /**
      * Build call for findPetsByStatus
      * @param status Status values that need to be considered for filter (required)
@@ -424,6 +459,7 @@ public class PetApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for findPetsByTags
      * @param tags Tags to filter by (required)
@@ -558,6 +594,7 @@ public class PetApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for getPetById
      * @param petId ID of pet to return (required)
@@ -680,6 +717,7 @@ public class PetApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for updatePet
      * @param pet Pet object that needs to be added to the store (required)
@@ -797,6 +835,7 @@ public class PetApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for updatePetWithForm
      * @param petId ID of pet that needs to be updated (required)
@@ -930,6 +969,46 @@ public class PetApi {
         com.squareup.okhttp.Call call = updatePetWithFormValidateBeforeCall(petId, name, status, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
+    }
+
+    public class APIupdatePetWithFormRequest {
+        private final Long petId;
+        private String name;
+        private String status;
+
+        private APIupdatePetWithFormRequest(Long petId) {
+            this.petId = petId;
+        }
+
+        public APIupdatePetWithFormRequest name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public APIupdatePetWithFormRequest status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return updatePetWithFormCall(petId, name, status, progressListener, progressRequestListener);
+        }
+
+        public void execute() throws ApiException {
+            updatePetWithForm(petId, name, status);
+        }
+
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return updatePetWithFormWithHttpInfo(petId, name, status);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return updatePetWithFormAsync(petId, name, status, callback);
+        }
+    }
+
+    public APIupdatePetWithFormRequest updatePetWithForm(Long petId) {
+        return new APIupdatePetWithFormRequest(petId);
     }
     /**
      * Build call for uploadFile
@@ -1068,6 +1147,46 @@ public class PetApi {
         Type localVarReturnType = new TypeToken<ModelApiResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
+    }
+
+    public class APIuploadFileRequest {
+        private final Long petId;
+        private String additionalMetadata;
+        private File file;
+
+        private APIuploadFileRequest(Long petId) {
+            this.petId = petId;
+        }
+
+        public APIuploadFileRequest additionalMetadata(String additionalMetadata) {
+            this.additionalMetadata = additionalMetadata;
+            return this;
+        }
+
+        public APIuploadFileRequest file(File file) {
+            this.file = file;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return uploadFileCall(petId, additionalMetadata, file, progressListener, progressRequestListener);
+        }
+
+        public ModelApiResponse execute() throws ApiException {
+            return uploadFile(petId, additionalMetadata, file);
+        }
+
+        public ApiResponse<ModelApiResponse> executeWithHttpInfo() throws ApiException {
+            return uploadFileWithHttpInfo(petId, additionalMetadata, file);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<ModelApiResponse> callback) throws ApiException {
+            return uploadFileAsync(petId, additionalMetadata, file, callback);
+        }
+    }
+
+    public APIuploadFileRequest uploadFile(Long petId) {
+        return new APIuploadFileRequest(petId);
     }
     /**
      * Build call for uploadFileWithRequiredFile
@@ -1211,5 +1330,41 @@ public class PetApi {
         Type localVarReturnType = new TypeToken<ModelApiResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
+    }
+
+    public class APIuploadFileWithRequiredFileRequest {
+        private final Long petId;
+        private final File requiredFile;
+        private String additionalMetadata;
+
+        private APIuploadFileWithRequiredFileRequest(Long petId, File requiredFile) {
+            this.petId = petId;
+            this.requiredFile = requiredFile;
+        }
+
+        public APIuploadFileWithRequiredFileRequest additionalMetadata(String additionalMetadata) {
+            this.additionalMetadata = additionalMetadata;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return uploadFileWithRequiredFileCall(petId, requiredFile, additionalMetadata, progressListener, progressRequestListener);
+        }
+
+        public ModelApiResponse execute() throws ApiException {
+            return uploadFileWithRequiredFile(petId, requiredFile, additionalMetadata);
+        }
+
+        public ApiResponse<ModelApiResponse> executeWithHttpInfo() throws ApiException {
+            return uploadFileWithRequiredFileWithHttpInfo(petId, requiredFile, additionalMetadata);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<ModelApiResponse> callback) throws ApiException {
+            return uploadFileWithRequiredFileAsync(petId, requiredFile, additionalMetadata, callback);
+        }
+    }
+
+    public APIuploadFileWithRequiredFileRequest uploadFileWithRequiredFile(Long petId, File requiredFile) {
+        return new APIuploadFileWithRequiredFileRequest(petId, requiredFile);
     }
 }

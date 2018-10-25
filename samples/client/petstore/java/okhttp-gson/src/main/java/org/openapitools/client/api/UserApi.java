@@ -171,6 +171,7 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for createUsersWithArrayInput
      * @param user List of user object (required)
@@ -288,6 +289,7 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for createUsersWithListInput
      * @param user List of user object (required)
@@ -405,6 +407,7 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for deleteUser
      * @param username The name that needs to be deleted (required)
@@ -523,6 +526,7 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for getUserByName
      * @param username The name that needs to be fetched. Use user1 for testing. (required)
@@ -645,6 +649,7 @@ public class UserApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for loginUser
      * @param username The user name for login (required)
@@ -783,6 +788,7 @@ public class UserApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for logoutUser
      * @param progressListener Progress listener
@@ -891,6 +897,7 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for updateUser
      * @param username name that need to be deleted (required)
@@ -1018,4 +1025,5 @@ public class UserApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
 }

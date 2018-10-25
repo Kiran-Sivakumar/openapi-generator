@@ -177,6 +177,38 @@ public class FakeApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
+    public class APIfakeOuterBooleanSerializeRequest {
+        private Boolean body;
+
+        private APIfakeOuterBooleanSerializeRequest() {
+        }
+
+        public APIfakeOuterBooleanSerializeRequest body(Boolean body) {
+            this.body = body;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return fakeOuterBooleanSerializeCall(body, progressListener, progressRequestListener);
+        }
+
+        public Boolean execute() throws ApiException {
+            return fakeOuterBooleanSerialize(body);
+        }
+
+        public ApiResponse<Boolean> executeWithHttpInfo() throws ApiException {
+            return fakeOuterBooleanSerializeWithHttpInfo(body);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Boolean> callback) throws ApiException {
+            return fakeOuterBooleanSerializeAsync(body, callback);
+        }
+    }
+
+    public APIfakeOuterBooleanSerializeRequest fakeOuterBooleanSerialize() {
+        return new APIfakeOuterBooleanSerializeRequest();
+    }
     /**
      * Build call for fakeOuterCompositeSerialize
      * @param outerComposite Input composite as post body (optional)
@@ -292,6 +324,38 @@ public class FakeApi {
         Type localVarReturnType = new TypeToken<OuterComposite>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
+    }
+
+    public class APIfakeOuterCompositeSerializeRequest {
+        private OuterComposite outerComposite;
+
+        private APIfakeOuterCompositeSerializeRequest() {
+        }
+
+        public APIfakeOuterCompositeSerializeRequest outerComposite(OuterComposite outerComposite) {
+            this.outerComposite = outerComposite;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return fakeOuterCompositeSerializeCall(outerComposite, progressListener, progressRequestListener);
+        }
+
+        public OuterComposite execute() throws ApiException {
+            return fakeOuterCompositeSerialize(outerComposite);
+        }
+
+        public ApiResponse<OuterComposite> executeWithHttpInfo() throws ApiException {
+            return fakeOuterCompositeSerializeWithHttpInfo(outerComposite);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<OuterComposite> callback) throws ApiException {
+            return fakeOuterCompositeSerializeAsync(outerComposite, callback);
+        }
+    }
+
+    public APIfakeOuterCompositeSerializeRequest fakeOuterCompositeSerialize() {
+        return new APIfakeOuterCompositeSerializeRequest();
     }
     /**
      * Build call for fakeOuterNumberSerialize
@@ -409,6 +473,38 @@ public class FakeApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
+    public class APIfakeOuterNumberSerializeRequest {
+        private BigDecimal body;
+
+        private APIfakeOuterNumberSerializeRequest() {
+        }
+
+        public APIfakeOuterNumberSerializeRequest body(BigDecimal body) {
+            this.body = body;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return fakeOuterNumberSerializeCall(body, progressListener, progressRequestListener);
+        }
+
+        public BigDecimal execute() throws ApiException {
+            return fakeOuterNumberSerialize(body);
+        }
+
+        public ApiResponse<BigDecimal> executeWithHttpInfo() throws ApiException {
+            return fakeOuterNumberSerializeWithHttpInfo(body);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<BigDecimal> callback) throws ApiException {
+            return fakeOuterNumberSerializeAsync(body, callback);
+        }
+    }
+
+    public APIfakeOuterNumberSerializeRequest fakeOuterNumberSerialize() {
+        return new APIfakeOuterNumberSerializeRequest();
+    }
     /**
      * Build call for fakeOuterStringSerialize
      * @param body Input string as post body (optional)
@@ -524,6 +620,38 @@ public class FakeApi {
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
+    }
+
+    public class APIfakeOuterStringSerializeRequest {
+        private String body;
+
+        private APIfakeOuterStringSerializeRequest() {
+        }
+
+        public APIfakeOuterStringSerializeRequest body(String body) {
+            this.body = body;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return fakeOuterStringSerializeCall(body, progressListener, progressRequestListener);
+        }
+
+        public String execute() throws ApiException {
+            return fakeOuterStringSerialize(body);
+        }
+
+        public ApiResponse<String> executeWithHttpInfo() throws ApiException {
+            return fakeOuterStringSerializeWithHttpInfo(body);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<String> callback) throws ApiException {
+            return fakeOuterStringSerializeAsync(body, callback);
+        }
+    }
+
+    public APIfakeOuterStringSerializeRequest fakeOuterStringSerialize() {
+        return new APIfakeOuterStringSerializeRequest();
     }
     /**
      * Build call for testBodyWithFileSchema
@@ -642,6 +770,7 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for testBodyWithQueryParams
      * @param query  (required)
@@ -772,6 +901,7 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for testClientModel
      * @param client client model (required)
@@ -893,6 +1023,7 @@ public class FakeApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for testEndpointParameters
      * @param number None (required)
@@ -1133,6 +1264,100 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
+    public class APItestEndpointParametersRequest {
+        private final BigDecimal number;
+        private final Double _double;
+        private final String patternWithoutDelimiter;
+        private final byte[] _byte;
+        private Integer integer;
+        private Integer int32;
+        private Long int64;
+        private Float _float;
+        private String string;
+        private File binary;
+        private LocalDate date;
+        private OffsetDateTime dateTime;
+        private String password;
+        private String paramCallback;
+
+        private APItestEndpointParametersRequest(BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte) {
+            this.number = number;
+            this._double = _double;
+            this.patternWithoutDelimiter = patternWithoutDelimiter;
+            this._byte = _byte;
+        }
+
+        public APItestEndpointParametersRequest integer(Integer integer) {
+            this.integer = integer;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest int32(Integer int32) {
+            this.int32 = int32;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest int64(Long int64) {
+            this.int64 = int64;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest _float(Float _float) {
+            this._float = _float;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest string(String string) {
+            this.string = string;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest binary(File binary) {
+            this.binary = binary;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest date(LocalDate date) {
+            this.date = date;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest dateTime(OffsetDateTime dateTime) {
+            this.dateTime = dateTime;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest password(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public APItestEndpointParametersRequest paramCallback(String paramCallback) {
+            this.paramCallback = paramCallback;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return testEndpointParametersCall(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, string, binary, date, dateTime, password, paramCallback, progressListener, progressRequestListener);
+        }
+
+        public void execute() throws ApiException {
+            testEndpointParameters(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, string, binary, date, dateTime, password, paramCallback);
+        }
+
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return testEndpointParametersWithHttpInfo(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, string, binary, date, dateTime, password, paramCallback);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return testEndpointParametersAsync(number, _double, patternWithoutDelimiter, _byte, integer, int32, int64, _float, string, binary, date, dateTime, password, paramCallback, callback);
+        }
+    }
+
+    public APItestEndpointParametersRequest testEndpointParameters(BigDecimal number, Double _double, String patternWithoutDelimiter, byte[] _byte) {
+        return new APItestEndpointParametersRequest(number, _double, patternWithoutDelimiter, _byte);
+    }
     /**
      * Build call for testEnumParameters
      * @param enumHeaderStringArray Header parameter enum test (string array) (optional)
@@ -1305,6 +1530,80 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
+    public class APItestEnumParametersRequest {
+        private List<String> enumHeaderStringArray;
+        private String enumHeaderString;
+        private List<String> enumQueryStringArray;
+        private String enumQueryString;
+        private Integer enumQueryInteger;
+        private Double enumQueryDouble;
+        private List<String> enumFormStringArray;
+        private String enumFormString;
+
+        private APItestEnumParametersRequest() {
+        }
+
+        public APItestEnumParametersRequest enumHeaderStringArray(List<String> enumHeaderStringArray) {
+            this.enumHeaderStringArray = enumHeaderStringArray;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumHeaderString(String enumHeaderString) {
+            this.enumHeaderString = enumHeaderString;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumQueryStringArray(List<String> enumQueryStringArray) {
+            this.enumQueryStringArray = enumQueryStringArray;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumQueryString(String enumQueryString) {
+            this.enumQueryString = enumQueryString;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumQueryInteger(Integer enumQueryInteger) {
+            this.enumQueryInteger = enumQueryInteger;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumQueryDouble(Double enumQueryDouble) {
+            this.enumQueryDouble = enumQueryDouble;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumFormStringArray(List<String> enumFormStringArray) {
+            this.enumFormStringArray = enumFormStringArray;
+            return this;
+        }
+
+        public APItestEnumParametersRequest enumFormString(String enumFormString) {
+            this.enumFormString = enumFormString;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return testEnumParametersCall(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, progressListener, progressRequestListener);
+        }
+
+        public void execute() throws ApiException {
+            testEnumParameters(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
+        }
+
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return testEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return testEnumParametersAsync(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, callback);
+        }
+    }
+
+    public APItestEnumParametersRequest testEnumParameters() {
+        return new APItestEnumParametersRequest();
+    }
     /**
      * Build call for testInlineAdditionalProperties
      * @param requestBody request body (required)
@@ -1422,6 +1721,7 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for testJsonFormData
      * @param param field1 (required)
@@ -1556,4 +1856,5 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
 }

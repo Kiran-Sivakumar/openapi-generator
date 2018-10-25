@@ -175,4 +175,5 @@ public class AnotherFakeApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
 }
