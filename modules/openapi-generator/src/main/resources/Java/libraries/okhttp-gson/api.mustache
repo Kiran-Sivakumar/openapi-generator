@@ -274,6 +274,50 @@ public class {{classname}} {
         {{localVariablePrefix}}apiClient.executeAsync({{localVariablePrefix}}call, {{localVariablePrefix}}localVarReturnType, {{localVariablePrefix}}callback);{{/returnType}}{{^returnType}}{{localVariablePrefix}}apiClient.executeAsync({{localVariablePrefix}}call, {{localVariablePrefix}}callback);{{/returnType}}
         return {{localVariablePrefix}}call;
     }
+
+    {{#hasOptionalParams}}
+    public class API{{operationId}}Request {
+        {{#requiredParams}}
+        private final {{{dataType}}} {{localVariablePrefix}}{{paramName}};
+        {{/requiredParams}}
+        {{#optionalParams}}
+        private {{{dataType}}} {{localVariablePrefix}}{{paramName}};
+        {{/optionalParams}}
+
+        private API{{operationId}}Request({{#requiredParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/requiredParams}}) {
+            {{#requiredParams}}
+            this.{{localVariablePrefix}}{{paramName}} = {{paramName}};
+            {{/requiredParams}}
+        }
+
+        {{#optionalParams}}
+        public API{{operationId}}Request {{paramName}}({{{dataType}}} {{paramName}}) {
+            this.{{localVariablePrefix}}{{paramName}} = {{paramName}};
+            return this;
+        }
+
+        {{/optionalParams}}
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return {{operationId}}Call({{#allParams}}{{localVariablePrefix}}{{paramName}}, {{/allParams}}progressListener, progressRequestListener);
+        }
+
+        public {{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}} execute() throws ApiException {
+            {{#returnType}}return {{/returnType}}{{operationId}}({{#allParams}}{{localVariablePrefix}}{{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}});
+        }
+
+        public ApiResponse<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}Void{{/returnType}}> executeWithHttpInfo() throws ApiException {
+            return {{operationId}}WithHttpInfo({{#allParams}}{{localVariablePrefix}}{{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}});
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<{{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}Void{{/returnType}}> callback) throws ApiException {
+            return {{operationId}}Async({{#allParams}}{{localVariablePrefix}}{{paramName}}, {{/allParams}}callback);
+        }
+    }
+
+    public API{{operationId}}Request {{operationId}}({{#requiredParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/requiredParams}}) {
+        return new API{{operationId}}Request({{#requiredParams}}{{paramName}}{{#hasMore}}, {{/hasMore}}{{/requiredParams}});
+    }
+    {{/hasOptionalParams}}
     {{/operation}}
 }
 {{/operations}}
