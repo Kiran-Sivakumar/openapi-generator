@@ -166,4 +166,36 @@ public class FakeApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
+    public class APItestCodeInjectEndRnNRRequest {
+        private UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE;
+
+        private APItestCodeInjectEndRnNRRequest() {
+        }
+
+        public APItestCodeInjectEndRnNRRequest UNKNOWN_BASE_TYPE(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) {
+            this.UNKNOWN_BASE_TYPE = UNKNOWN_BASE_TYPE;
+            return this;
+        }
+
+        public com.squareup.okhttp.Call buildCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+            return testCodeInjectEndRnNRCall(UNKNOWN_BASE_TYPE, progressListener, progressRequestListener);
+        }
+
+        public void execute() throws ApiException {
+            testCodeInjectEndRnNR(UNKNOWN_BASE_TYPE);
+        }
+
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return testCodeInjectEndRnNRWithHttpInfo(UNKNOWN_BASE_TYPE);
+        }
+
+        public com.squareup.okhttp.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return testCodeInjectEndRnNRAsync(UNKNOWN_BASE_TYPE, callback);
+        }
+    }
+
+    public APItestCodeInjectEndRnNRRequest testCodeInjectEndRnNR() {
+        return new APItestCodeInjectEndRnNRRequest();
+    }
 }
