@@ -62,8 +62,8 @@ public class {{classname}} {
         this.{{localVariablePrefix}}apiClient = apiClient;
     }
 
-    {{#operation}}{{^useBuildersForApiRequests}}
-    /**
+    {{#operation}}
+    {{^useBuildersForApiRequests}}/**
      * Build call for {{operationId}}{{#allParams}}
      * @param {{paramName}} {{description}}{{#required}} (required){{/required}}{{^required}} (optional{{^isContainer}}{{#defaultValue}}, default to {{.}}{{/defaultValue}}{{/isContainer}}){{/required}}{{/allParams}}
      * @param progressListener Progress listener
