@@ -208,9 +208,7 @@ public class {{classname}} {
         return {{localVariablePrefix}}resp.getData();{{/returnType}}
     }
     {{/useBuildersForApiRequests}}
-
-    {{^useBuildersForApiRequests}}
-    /**
+    {{^useBuildersForApiRequests}}/**
      * {{summary}}
      * {{notes}}{{#allParams}}
      * @param {{paramName}} {{description}}{{#required}} (required){{/required}}{{^required}} (optional{{^isContainer}}{{#defaultValue}}, default to {{.}}{{/defaultValue}}{{/isContainer}}){{/required}}{{/allParams}}
@@ -233,8 +231,7 @@ public class {{classname}} {
         return {{localVariablePrefix}}apiClient.execute({{localVariablePrefix}}call, {{localVariablePrefix}}localVarReturnType);{{/returnType}}{{^returnType}}return {{localVariablePrefix}}apiClient.execute({{localVariablePrefix}}call);{{/returnType}}
     }
 
-    {{^useBuildersForApiRequests}}
-    /**
+    {{^useBuildersForApiRequests}}/**
      * {{summary}} (asynchronously)
      * {{notes}}{{#allParams}}
      * @param {{paramName}} {{description}}{{#required}} (required){{/required}}{{^required}} (optional{{^isContainer}}{{#defaultValue}}, default to {{.}}{{/defaultValue}}{{/isContainer}}){{/required}}{{/allParams}}
