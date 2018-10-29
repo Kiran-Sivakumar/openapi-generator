@@ -115,10 +115,6 @@ class SlimRouter
             '/v2/fake',
             FakeApi::class . ':testEnumParameters'
         );
-        $app->DELETE(
-            '/v2/fake',
-            FakeApi::class . ':testGroupParameters'
-        );
         $app->POST(
             '/v2/fake/inline-additionalProperties',
             FakeApi::class . ':testInlineAdditionalProperties'

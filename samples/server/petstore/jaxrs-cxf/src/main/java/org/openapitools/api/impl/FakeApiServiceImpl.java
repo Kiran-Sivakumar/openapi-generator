@@ -104,18 +104,6 @@ public class FakeApiServiceImpl implements FakeApi {
     }
     
     /**
-     * Fake endpoint to test group parameters (optional)
-     *
-     * Fake endpoint to test group parameters (optional)
-     *
-     */
-    public void testGroupParameters(Integer stringGroup, Boolean booleanGroup, Long int64Group) {
-        // TODO: Implement...
-        
-        
-    }
-    
-    /**
      * test inline additionalProperties
      *
      */
